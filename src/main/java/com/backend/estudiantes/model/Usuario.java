@@ -18,6 +18,9 @@ public class Usuario {
     @Column(nullable = false)
     private String apellido;
 
+    @Column(nullable = false)
+    private String direccion;
+
     @Column(name="email",unique = true,nullable = false)
     private String email;
 

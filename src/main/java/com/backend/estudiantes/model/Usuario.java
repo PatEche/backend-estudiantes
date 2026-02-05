@@ -1,11 +1,14 @@
 package com.backend.estudiantes.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
-@Entity
-@Table(name = "usuario")
+
 @Data
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "usuario")
 public class Usuario {
 
     @Id
@@ -31,7 +34,8 @@ public class Usuario {
     private boolean activo = true;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name="role",nullable = false)
     private Role role;
+
 
 }

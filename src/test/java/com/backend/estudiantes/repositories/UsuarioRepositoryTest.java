@@ -9,6 +9,7 @@ import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
 
 import java.util.Optional;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -51,5 +52,6 @@ public class UsuarioRepositoryTest {
         assertEquals("juan_barrot@gmail.com", encontrado.getEmail(),
                 "El email del usuario no coincide");
 
+//        assertThat("El nombre buscando no existe",encontrado.getNombre().equals("Juan"));
     }
 }
